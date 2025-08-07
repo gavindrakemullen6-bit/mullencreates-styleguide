@@ -1,0 +1,32 @@
+/*
+Theme Name: MullenCreates Astra Child
+Description: Custom style definitions for branding consistency
+*/
+
+:root {
+  --primary-blue: #0B3D91;
+  --light-gray: #f5f7fa;
+  --white: #ffffff;
+  --font-sans: 'Public Sans', sans-serif;
+  --font-heading: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--white);
+  color: #111;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-blue);
+}
+
+.btn-primary {
+  background: var(--primary-blue);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}

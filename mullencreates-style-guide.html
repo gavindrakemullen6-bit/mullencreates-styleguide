@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MullenCreates Style Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0B3D91;
+            --light-gray: #f5f7fa;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --border-light: #e1e5e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), #1e5aa8);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background: var(--light-gray);
+            color: var(--primary-blue);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Color Palette Section */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .color-swatch {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-sample {
+            height: 120px;
+            position: relative;
+        }
+
+        .color-sample.primary-blue {
+            background: var(--primary-blue);
+        }
+
+        .color-sample.light-gray {
+            background: var(--light-gray);
+        }
+
+        .color-sample.white {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+        }
+
+        .color-info {
+            padding: 20px;
+        }
+
+        .color-name {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .color-hex {
+            font-family: 'Monaco', 'Consolas', monospace;
+            background: var(--light-gray);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        /* Typography Section */
+        .typography-samples {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .type-sample {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .type-sample h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .type-sample h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .type-sample h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .type-sample p {
+            font-family: 'Public Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .type-label {
+            font-family: 'Public Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 5px;
+        }
+
+        /* Button Section */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .button-demo {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .btn {
+            font-family: 'Public Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #083066;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(11, 61, 145, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(11, 61, 145, 0.3);
+        }
+
+        .button-label {
+            font-family: 'Public Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* Cards and Forms Section */
+        .cards-forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-family: 'Public Sans', sans-serif;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            font-family: 'Public Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-light);
+            border-radius: 8px;
+            font-family: 'Public Sans', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(11, 61, 145, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav ul {
+                gap: 15px;
+            }
+
+            .color-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards-forms-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .type-sample h1 {
+                font-size: 2.2rem;
+            }
+
+            .type-sample h2 {
+                font-size: 1.8rem;
+            }
+
+            .type-sample h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .header {
+                padding: 40px 0;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .type-sample, .button-demo, .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>MullenCreates</h1>
+            <p>Brand Style Guide</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="#colors">Color Palette</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#cards-forms">Cards & Forms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Color Palette Section -->
+    <section id="colors" class="section">
+        <div class="container">
+            <h2 class="section-title">Color Palette</h2>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-sample primary-blue"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Blue</div>
+                        <div class="color-hex">#0B3D91</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-sample light-gray"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Gray</div>
+                        <div class="color-hex">#f5f7fa</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-sample white"></div>
+                    <div class="color-info">
+                        <div class="color-name">White</div>
+                        <div class="color-hex">#ffffff</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section id="typography" class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">Typography</h2>
+            <div class="typography-samples">
+                <div class="type-sample">
+                    <div class="type-label">Heading 1 - Roboto Bold</div>
+                    <h1>The quick brown fox jumps</h1>
+                </div>
+                <div class="type-sample">
+                    <div class="type-label">Heading 2 - Roboto Semibold</div>
+                    <h2>The quick brown fox jumps</h2>
+                </div>
+                <div class="type-sample">
+                    <div class="type-label">Heading 3 - Roboto Medium</div>
+                    <h3>The quick brown fox jumps over the lazy dog</h3>
+                </div>
+                <div class="type-sample">
+                    <div class="type-label">Paragraph - Public Sans Regular</div>
+                    <p>The quick brown fox jumps over the lazy dog. This is a sample paragraph demonstrating the body text style used throughout the MullenCreates brand. It should be clear, readable, and maintain proper line spacing for optimal readability.</p>
+                    <p><strong>Bold text example</strong> - This shows how bold text appears in body copy.</p>
+                    <p><em>Italic text example</em> - This shows how italic text appears in body copy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons Section -->
+    <section id="buttons" class="section">
+        <div class="container">
+            <h2 class="section-title">Buttons</h2>
+            <div class="button-grid">
+                <div class="button-demo">
+                    <div class="button-label">Primary Button</div>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="button-demo">
+                    <div class="button-label">Outline Button</div>
+                    <a href="#" class="btn btn-outline">Secondary Action</a>
+                    <a href="#" class="btn btn-outline">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards and Forms Section -->
+    <section id="cards-forms" class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">Cards & Forms</h2>
+            <div class="cards-forms-grid">
+                <!-- Card Example -->
+                <div class="card">
+                    <h3>Sample Card</h3>
+                    <p>This is an example of a card component. Cards are used to group related information and actions in a visually distinct container.</p>
+                    <a href="#" class="btn btn-primary">Card Action</a>
+                </div>
+
+                <!-- Form Example -->
+                <div class="card">
+                    <h3>Contact Form</h3>
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label" for="name">Full Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input type="email" id="email" class="form-input" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" class="form-input form-textarea" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Information Card -->
+                <div class="card">
+                    <h3>Brand Guidelines</h3>
+                    <p>Use these components consistently across all MullenCreates materials to maintain brand coherence and professional appearance.</p>
+                    <a href="#" class="btn btn-outline">Download Assets</a>
+                </div>
+
+                <!-- Feature Card -->
+                <div class="card">
+                    <h3>Design Principles</h3>
+                    <p>Clean, modern design with focus on readability and user experience. Consistent spacing, clear hierarchy, and accessible color contrast.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
